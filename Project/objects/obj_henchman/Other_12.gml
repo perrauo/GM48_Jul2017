@@ -19,5 +19,18 @@ switch (STATE)
 	instance_change(obj_henchman_failed, true);
 	break;
 	
+	case HENCHMAN_STATES.GUIDE:
+	instance_change(obj_henchman_guide, true);
+	break;
+	
+	
+	
+	///ON TASK SPECIFIC
+	case HENCHMAN_STATES.SPRAWL:
+	instance_change(obj_henchman_sprawl, true);
+	break;
+	
+	
+	
 	
 }

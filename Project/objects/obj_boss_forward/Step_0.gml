@@ -40,8 +40,7 @@ if (rand_move == 0)
 			break;
 		}
 	} 
-	
-	
+		
 	
 	var biggest_offset = ds_list_find_value(global.lv_sections,0).offset_x;
 	for(i = 1; i< 3; i++)
@@ -55,5 +54,7 @@ if (rand_move == 0)
 }
 else
 {
+	dest_y = clamp(dest_y, 260, 270);
+	
     mp_potential_step_object(dest_x, dest_y, move_spd, obj_obstacle);
 }

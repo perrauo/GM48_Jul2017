@@ -1,8 +1,8 @@
-/// @description Init State
+/// @description Insert description here
 // You can write your code in this editor
 
-follow_dist = 100;
+//for control
+my_spd = 4;
 
-dest_x = obj_boss.x;
-dest_y = obj_boss.y;
+is_moving = false;
 

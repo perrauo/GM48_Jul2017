@@ -17,6 +17,8 @@ if(!point_in_circle(dest_x, dest_y, obj_boss.x, obj_boss.y, follow_dist))
 	dest_x = obj_boss.x+_dir_x*follow_dist;
 	dest_y = obj_boss.y+_dir_y*follow_dist;
 	
+	dest_y = clamp(dest_y, 260, 300);
+	
 		//first condition
 		var flag = false;
 		for(i = 0; i< 3; i++)

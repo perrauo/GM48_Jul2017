@@ -3,13 +3,6 @@
 event_inherited()
 
 
-//for control
-my_spd = 4;
-
-is_moving = false;
-
-
-
 
 enum HENCHMAN_STATES
 {
@@ -17,6 +10,10 @@ enum HENCHMAN_STATES
 	ONTASK,
 	UMBRELLA,
 	FAILED,
+	GUIDE,
+	
+	//task specific states
+	SPRAWL,
 }
 
 STATE = HENCHMAN_STATES.FOLLOW;

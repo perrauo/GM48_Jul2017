@@ -2,5 +2,4 @@
 // You can write your code in this editor
 
 event_inherited();
-
 depth = depth_background;
