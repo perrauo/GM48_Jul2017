@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_henchman_sprawl",
     "eventList": [
-        
+        {
+            "id": "b565dd23-a63a-4bf9-a041-2ea86640e52e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "68013ce3-e0e7-43ba-9d29-160d92a3b6df"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "37c342f8-fb37-462d-8469-222717270241",

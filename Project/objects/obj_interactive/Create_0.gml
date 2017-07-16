@@ -3,6 +3,9 @@
 
 event_inherited()
 
+
+interactive = true;
+
 ///pulsing
 selected = false;
 selected_time = 60;

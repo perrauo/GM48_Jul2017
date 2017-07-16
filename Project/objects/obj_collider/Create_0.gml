@@ -14,6 +14,7 @@ enum COLLIDER_TYPE
 	SOLID,
 	FX,
 	HIT,
+	SPLASH,
 
 }
 TYPE = noone;

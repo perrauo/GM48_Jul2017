@@ -1,0 +1,9 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+event_inherited();
+
+
+draw_sprite_ext(sprite_index,image_index,x,y,scale,scale,0,col_angry,1);
+
+//draw_text(x,y, string(x)+","+ string(y));

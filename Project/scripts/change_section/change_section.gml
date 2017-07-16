@@ -8,6 +8,7 @@ var height = tilemap_get_height(tm_id_sidewalk);
 var tile = noone;
 for(var i = 0; i< height; i++)
 {
+	
 	for(var j = 0; j< width; j++)
 	{
 		tile = tilemap_get(tm_id_sidewalk, j,i);
@@ -15,7 +16,7 @@ for(var i = 0; i< height; i++)
 				
 		if(!tile_get_empty(tile))
 		{
-									
+
 			//choose tile
 			var new_tile_index = choose(1,2,3);
 			var new_tile = tile_set_index(tile, new_tile_index);
@@ -29,50 +30,56 @@ for(var i = 0; i< height; i++)
 }
 
 
-
-var task_count = 4+(round(global.section_count*global.difficulty));//
+//add regular puddles
+var puddle_count = 4+(round(global.section_count*global.difficulty));//
 //Add task to the world (e.g puddle)
 
 var pos_x = noone;
 var pos_y = noone;
 
-for(var i = 0; i<task_count; i++)
+for(var i = 0; i<puddle_count; i++)
 {
-	
-	var flag1 = true;
-	var flag2 = true;
-	while(true)//find suitable pos
+	var ok_rad = 50;
+	do
 	{
-		pos_x = random_range(-cam_width, cam_width);
-		pos_y = random_range(260, 300);
+	pos_x = random_range(cam_width*1.3, 2.5*cam_width);
+	pos_y = random_range(260, 280);
 		
-		if(collision_circle(pos_x, pos_y, 50, obj_task, false, false) == noone)
-		flag1 = true;
-		
-		var tile = tilemap_get_at_pixel(tm_id_sidewalk, pos_x, pos_y);
-		
-		if(!tile_get_empty(tile))
-		{		
-			flag2 = true;
-		}
-			
-		
-				//both cond met
-		if(flag1 && flag2)
-		break;
-		
-	}
-	
+	}until(collision_circle(pos_x,pos_y,ok_rad,obj_puddle, false,false) == noone)
 	
 	//choose between many task
-	var task = instance_create_depth(pos_x,pos_y, depth_foreground,choose(obj_puddle));
+	var puddle = instance_create_depth(pos_x,pos_y, depth_foreground,obj_puddle);
 	//add to my objects so we can move them
-	ds_list_add(my_objects, task);
+	ds_list_add(my_objects, puddle);
 
 }
 
 
-//////objects n buildings///
+//add car puddles
+puddle_count = 1+(round(global.section_count*global.difficulty));//
+
+for(var i = 0; i<puddle_count; i++)
+{
+	var ok_rad = 50;
+	do
+	{
+	pos_x = random_range(cam_width*1.3, 2.5*cam_width);
+	pos_y = 360;
+	
+		
+	}until(collision_circle(pos_x,pos_y,ok_rad,obj_car_puddle, false,false) == noone)
+	
+		
+	//choose between many task
+	var puddle_large = instance_create_depth(pos_x,pos_y, depth_foreground,obj_car_puddle);
+	//add to my objects so we can move them
+	ds_list_add(my_objects, puddle_large);
+
+}
+
+
+
+//////Randomize buildings///
 var size = ds_list_size(my_buildings);
 for(i = 0; i<size; i++)
 {

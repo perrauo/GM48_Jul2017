@@ -9,7 +9,7 @@ var yy = argument1;
 var _TYPE = argument2;	
 
 
-	var hits = instance_place_multiple(xx, yy, obj_collider);
+	var hits = instance_place_multiple(xx, yy, obj_floor_collider);
 	
 	if(hits != noone)//if hits is not noone
 	{

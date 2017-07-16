@@ -6,7 +6,8 @@
     "children": [
         "3e2e96c4-364d-4c22-83f4-ee113cb96456",
         "275feb24-a329-4651-97a1-6f3b50d93df9",
-        "c58966ab-c747-4fad-b127-47e21eba8002"
+        "c58966ab-c747-4fad-b127-47e21eba8002",
+        "bb00de42-185b-4721-bc17-c08e61fba10c"
     ],
     "filterType": "GMObject",
     "folderName": "gr_collisions",

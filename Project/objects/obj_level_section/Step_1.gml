@@ -51,18 +51,6 @@ for(i = 0; i<size; i++)
 	building.x = building.start_x + offset_x;
 }
 
-var size = ds_list_size(my_objects);
-for(i = 0; i<size; i++)
-{
-	var obj = ds_list_find_value(my_objects, i);
-	
-	if(instance_exists(obj))//might have been destroyed
-	{
-	obj.x = obj.start_x + offset_x;
-	}
-}
-
-
 
 //update offset_x
 offset_x -= global.scroll_spd;
@@ -73,9 +61,10 @@ offset_x -= global.scroll_spd;
 //todo FIX A LITTLE OF JITTERING
 if(offset_x < -cam_width)
 {
-	//clear my objects (buildings are kept)
+		
 	ds_list_clear(my_objects);
 	
+	score+= 10;
 	global.section_count ++;
 	
 	//find furthest offseted sec
@@ -92,5 +81,7 @@ if(offset_x < -cam_width)
 	
 	//add offscreen section at correct offset
 	offset_x = biggest_offset+cam_width-2;
-			
+	
+	//clear my objects (buildings are kept)
+				
 }

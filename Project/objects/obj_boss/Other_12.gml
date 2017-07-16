@@ -15,5 +15,9 @@ switch (STATE)
 	instance_change(obj_boss_angry, true);
 	break;
 	
+	case BOSS_STATES.RAGE:
+	instance_change(obj_boss_rage, true);
+	break;
+	
 	
 }

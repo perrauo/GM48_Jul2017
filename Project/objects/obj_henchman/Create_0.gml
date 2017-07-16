@@ -3,17 +3,17 @@
 event_inherited()
 
 
-
 enum HENCHMAN_STATES
 {
 	FOLLOW,
 	ONTASK,
-	UMBRELLA,
 	FAILED,
 	GUIDE,
 	
 	//task specific states
 	SPRAWL,
+	UMBRELLA,
+	HOLDING
 }
 
 STATE = HENCHMAN_STATES.FOLLOW;
@@ -33,5 +33,8 @@ bottom_collider.height = 10; //dims
 bottom_collider.offset_x = -sprite_width/3;//offsets
 bottom_collider.offset_y = -4;
 
+
+//create emiter
+em_water = part_emitter_create(global.ps_water);
 
 

@@ -12,14 +12,18 @@ event_inherited();
 
 
 //////////////detect mouse
-if point_in_rectangle(mouse_x, mouse_y, bbox_left, bbox_top, bbox_right, bbox_bottom)
+with(global.cursor)
 {
-	mouse_on_top = true;
-}
-else
-{
-	mouse_on_top = false
-}		
+	//mouse on top of closest to the front
+	if(place_meeting(x, y, other))
+	{
+		other.mouse_on_top = true;	
+	}
+	else
+		other.mouse_on_top = false;
+	
+	
+}	
 		
 		
 		
@@ -35,26 +39,31 @@ if(mouse_on_top)
 	{
 		if(mouse_check_button_pressed(mb_any))
 		{
-			
-		with(obj_henchman)
+		
+		with(obj_interactive_character)
 		{
-		selected = false;
-		}	
+			selected = false;
+		}
 		
-		global.selected_henchman = self;
+		//if on task then free
+		if(instance_exists(curr_task) && curr_task.busy)
+		{	curr_task = noone;
+			STATE = HENCHMAN_STATES.FOLLOW;
+		}
+		else
+		{
+			//assign task
+			selected = true;
+			alarm_set(0, selected_time);
+		}
 		
-							
-		//assign task
-		selected = true;
-		alarm_set(0, selected_time);
 		pulse = 0;
 		
 		
 		}
 				
 	}
-	
-			
+				
 }
 else
 pulse = 0;		

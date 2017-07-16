@@ -9,7 +9,8 @@ event_inherited();
 //y2	The y coordinate of the bottom side of the rectangle to check.
 
 
-
+if(!interactive)
+exit;
 
 //////////////detect mouse
 if point_in_rectangle(mouse_x, mouse_y, bbox_left, bbox_top, bbox_right, bbox_bottom)
