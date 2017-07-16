@@ -47,7 +47,9 @@ if(mouse_on_top)
 		
 		//if on task then free
 		if(instance_exists(curr_task) && curr_task.busy)
-		{	curr_task = noone;
+		{	
+			curr_task.busy = false;
+			curr_task = noone;
 			STATE = HENCHMAN_STATES.FOLLOW;
 		}
 		else

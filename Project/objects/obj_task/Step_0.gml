@@ -49,7 +49,6 @@ if(henchemen != noone)
 	
   if(_hencheman.curr_task == self)
   {
-	
 	hencheman = _hencheman;
 	busy = true;
 	break;

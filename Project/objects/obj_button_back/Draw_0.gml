@@ -1,7 +1,7 @@
 /// @description draw button text
 // You can write your code in this editor
 if(room = rm_howto)
-w = color_menu
+w = c_menu0
 else
 w = c_white;
 

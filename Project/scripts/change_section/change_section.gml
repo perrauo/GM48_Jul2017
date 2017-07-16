@@ -43,7 +43,7 @@ for(var i = 0; i<puddle_count; i++)
 	do
 	{
 	pos_x = random_range(cam_width*1.3, 2.5*cam_width);
-	pos_y = random_range(260, 280);
+	pos_y = random_range(265, 280);
 		
 	}until(collision_circle(pos_x,pos_y,ok_rad,obj_puddle, false,false) == noone)
 	

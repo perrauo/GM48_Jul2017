@@ -1,6 +1,10 @@
 /// @description Init State
 // You can write your code in this editor
 
+if(!audio_is_playing(sfx_angry))
+audio_play_sound(sfx_angry,1,false);
+
+
 //increase anger
 global.anger_level+= .1;
 

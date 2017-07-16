@@ -1,7 +1,7 @@
 /// @description draw button text
 // You can write your code in this editor
 
-w = color_menu;
+w = c_white
 font= fnt_title;
 
 btn_txt = "How to Play";

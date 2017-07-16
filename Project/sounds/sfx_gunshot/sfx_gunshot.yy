@@ -1,5 +1,5 @@
 {
-    "id": "5efa52ff-3b04-4af5-9647-3052fbf6bad6",
+    "id": "17f28feb-b81a-4f69-bdcd-9f3fa542b441",
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "sfx_gunshot",

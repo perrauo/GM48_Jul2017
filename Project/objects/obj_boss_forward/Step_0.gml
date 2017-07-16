@@ -31,7 +31,7 @@ if (rand_move == 0)
 		
 		//second condition
 		if(flag1)
-		if(is_between(dest_x, global.main_cam.x-100, global.main_cam.x+100))
+		if(is_between(dest_x,0, cam_width/2))
 		{
 			break
 		}

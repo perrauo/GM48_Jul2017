@@ -4,6 +4,10 @@
 if(room = rm_game)
 {
 
+audio_stop_all();
+audio_play_sound(mus_main,1,true);
+
+
 global.main_cam = instance_create_depth(x,y, depth_cam, ctrl_cam);
 global.ctrl_level_init = instance_create_depth(x,y, depth_ctrl, ctrl_level);
 global.cursor = instance_create_depth(x,y, depth_ctrl, obj_cursor);

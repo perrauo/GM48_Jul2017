@@ -6,23 +6,33 @@ draw_set_color(c_white);
 draw_set_font(font);
 draw_text(posx , posy-80, "HOW TO PLAY");
 
-draw_set_color(color_menu);
+draw_set_color(c_menu0);
 font = fnt_howto;
 draw_set_font(font);
 
-s = "Collect as much money from customers by selling them your crap without them catching you."+
+
+//HOW TO PLAY
+
+//Click on puddles and then the henchman (or vice versa) to have them 
+//protect the boss. To open the umbrella, click on the boss and then a 
+//henchman to have them come forward.
+
+//Do whatever you must to keep the boss dry!
+
+
+
+s = "Do whatever you must to keep the boss dry!"+
 "\n"+
 "\n"+
 "CONTROLS"+
 "\n"+
 "\n"+ 
-"* Move character with left mouse button."+
+"Click on a henchman and assign him a task by selecting an interactive element"+
 "\n"+
-"* Set up a kiosk with right mouse button."+
+"To open the umbrella, click on a henchman and the boss."+
 "\n"+
-"* Approach the edge of the screen to escape the town."+
-"\n"+
-"* Once on the map screen, click on a neighbouring city to pursue your shenanigans.";
+"Select a henchman and guide him along the sidewalk by holding the left mouse button";
+
 
 draw_text(posx, posy, s);
 draw_set_color(c_white);
