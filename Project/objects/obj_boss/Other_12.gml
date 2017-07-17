@@ -3,9 +3,6 @@
 
 switch (STATE)
 {
-	case BOSS_STATES.STOP:
-	instance_change(obj_boss_stop, true);
-	break;
 	
 	case BOSS_STATES.FORWARD:
 	instance_change(obj_boss_forward, true);

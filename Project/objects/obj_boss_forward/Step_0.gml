@@ -37,7 +37,7 @@ if (rand_move == 0)
 		}
 		else
 		{
-			dest_x = global.main_cam.x;
+			dest_x = cam_width/3;
 			break;
 		}
 	} 

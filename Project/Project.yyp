@@ -575,14 +575,6 @@
             }
         },
         {
-            "Key": "60559856-0519-48f1-ab88-05e203a291c1",
-            "Value": {
-                "id": "c32e98c1-491a-460a-9998-5221b0a92f25",
-                "resourcePath": "objects\\obj_boss_stop\\obj_boss_stop.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "61e4b788-2e3b-44e2-8462-efaa57f506bb",
             "Value": {
                 "id": "1bcd9f84-8914-4f8a-88f7-74fe8b0ea91d",

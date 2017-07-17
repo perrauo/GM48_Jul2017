@@ -9,8 +9,6 @@ time = noone; //time when apply transition
 //Shaders to toggle
 toggle_shd_transition_in = false;
 toggle_shd_transition_out = false;
-toggle_shd_approach_bord = false;
-
 
 //toggle_shd...
 //...
